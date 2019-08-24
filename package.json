@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "main": "lib/js/src/Hooks.js",
     "scripts": {
+        "prepublish": "bsb -make-world",
         "build": "bsb -make-world",
         "start": "bsb -make-world -w",
         "clean": "bsb -clean-world",
