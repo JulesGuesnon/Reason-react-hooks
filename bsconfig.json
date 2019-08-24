@@ -1,9 +1,10 @@
 {
-  "name": "reason-react-hooks",
-  "sources": "src",
-  "namespace": true,
-  "bs-dependencies": [
-    "reason-react"
-  ],
-  "refmt": 3
+    "name": "reason-react-hooks",
+    "sources": {
+        "dir": "src",
+        "subdirs": true
+    },
+    "namespace": true,
+    "bs-dependencies": ["reason-react"],
+    "refmt": 3
 }

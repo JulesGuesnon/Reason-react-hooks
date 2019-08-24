@@ -12,23 +12,27 @@ bsb_dir_group = 0
 refmt = /Users/julesguesnon/Dev/open/reason-react-hooks/node_modules/bs-platform/lib/refmt.exe
 reason_react_jsx = 
 refmt_flags = --print binary
-g_lib_incls = -I . -I src
+g_lib_incls = -I . -I src/hooks -I src
 rule build_ast_and_module_sets_from_re
   command = $bsc -pp "$refmt $refmt_flags" $reason_react_jsx  $ppx_flags $warnings $bsc_flags -c -o $out -bs-syntax-only -bs-binary-ast -impl $in
   description = [34mBuilding[39m [2m${out}[22m
-build src/useHover.mlast : build_ast_and_module_sets_from_re $src_root_dir/src/useHover.re
+build src/Hooks.mlast : build_ast_and_module_sets_from_re $src_root_dir/src/Hooks.re
 rule build_deps
   command = $bsdep $g_ns -g $bsb_dir_group $in
   restat = 1
   description = [34mBuilding[39m [2m${out}[22m
-build src/useHover.d : build_deps src/useHover.mlast
+build src/Hooks.d : build_deps src/Hooks.mlast
 rule re_cmj_cmi
   command = $bsc $g_pkg_flg  -bs-re-out -bs-super-errors $g_pkg_incls $g_lib_incls $bsc_extra_includes $warnings $bsc_flags $gentypeconfig -o $out -c  $in $postbuild
   dyndep = $in_e.d
   restat = 1
   description = [34mBuilding[39m [2m${out}[22m
-build src/useHover-ReasonReactHooks.cmj |  $src_root_dir/lib/js/src/useHover.js src/useHover-ReasonReactHooks.cmi : re_cmj_cmi src/useHover.mlast ||  src/useHover.d
+build src/Hooks-ReasonReactHooks.cmj |  $src_root_dir/lib/js/src/Hooks.js src/Hooks-ReasonReactHooks.cmi : re_cmj_cmi src/Hooks.mlast ||  src/Hooks.d
   g_pkg_flg = $g_pkg_flg  -bs-package-output commonjs:lib/js/src
+build src/hooks/useHover.mlast : build_ast_and_module_sets_from_re $src_root_dir/src/hooks/useHover.re
+build src/hooks/useHover.d : build_deps src/hooks/useHover.mlast
+build src/hooks/useHover-ReasonReactHooks.cmj |  $src_root_dir/lib/js/src/hooks/useHover.js src/hooks/useHover-ReasonReactHooks.cmi : re_cmj_cmi src/hooks/useHover.mlast ||  src/hooks/useHover.d
+  g_pkg_flg = $g_pkg_flg  -bs-package-output commonjs:lib/js/src/hooks
 rule build_package
   command = $bsc -w -49 -no-alias-deps -bs-cmi-only -c $in
   restat = 1

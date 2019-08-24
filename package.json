@@ -1,7 +1,8 @@
 {
-    "name": "@julesgu/reason-react-hooks",
+    "name": "reason-react-hooks",
     "version": "0.1.0",
     "main": "lib/js/src/Hooks.js",
+    "description": "This package contains different kind of hooks that you might need",
     "scripts": {
         "prepublish": "bsb -make-world",
         "build": "bsb -make-world",
@@ -10,7 +11,11 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
-        "BuckleScript"
+        "BuckleScript",
+        "ReasonReact",
+        "ReasonML",
+        "Hooks",
+        "React"
     ],
     "author": "Jules Guesnon <hello@julesguesnon.com>",
     "license": "MIT",
