@@ -54,3 +54,14 @@
 27	40	1566659750229546704	src/Hooks-ReasonReactHooks.cmj	a066f911d4f0c4cc
 27	40	1566659750229546704	/Users/julesguesnon/Dev/open/reason-react-hooks/lib/js/src/Hooks.js	a066f911d4f0c4cc
 27	40	1566659750229546704	src/Hooks-ReasonReactHooks.cmi	a066f911d4f0c4cc
+1	25	1566660238383243601	ReasonReactHooks.cmi	f426ed14d99bd137
+0	52	1566660238460175845	src/Hooks.mlast	8f81bee54d28a52c
+1	53	1566660238460675485	src/hooks/useHover.mlast	16d5e00ddf5f1cfb
+53	63	1566660238460175845	src/Hooks.d	e37d41bced7b1db
+53	63	1566660238460675485	src/hooks/useHover.d	ccc973842fdd8553
+63	83	1566660238460675485	src/hooks/useHover-ReasonReactHooks.cmj	9a27282bfe4b27a
+63	83	1566660238460675485	/Users/julesguesnon/Dev/open/reason-react-hooks/lib/js/src/hooks/useHover.js	9a27282bfe4b27a
+63	83	1566660238460675485	src/hooks/useHover-ReasonReactHooks.cmi	9a27282bfe4b27a
+84	93	1566660238460175845	src/Hooks-ReasonReactHooks.cmj	a066f911d4f0c4cc
+84	93	1566660238460175845	/Users/julesguesnon/Dev/open/reason-react-hooks/lib/js/src/Hooks.js	a066f911d4f0c4cc
+84	93	1566660238460175845	src/Hooks-ReasonReactHooks.cmi	a066f911d4f0c4cc
