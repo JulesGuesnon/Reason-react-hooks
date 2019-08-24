@@ -1,7 +1,11 @@
 5.0.6
 1
-2
+4
 Hooks
+Utils
 UseHover
+UtilsDom
 src/Hooks,04
+src/utils/Utils,04
 src/hooks/useHover,03
+src/utils/UtilsDom,04

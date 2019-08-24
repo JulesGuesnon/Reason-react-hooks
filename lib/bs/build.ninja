@@ -12,7 +12,7 @@ bsb_dir_group = 0
 refmt = /Users/julesguesnon/Dev/open/reason-react-hooks/node_modules/bs-platform/lib/refmt.exe
 reason_react_jsx = 
 refmt_flags = --print binary
-g_lib_incls = -I . -I src/hooks -I src
+g_lib_incls = -I . -I src/utils -I src/hooks -I src
 rule build_ast_and_module_sets_from_re
   command = $bsc -pp "$refmt $refmt_flags" $reason_react_jsx  $ppx_flags $warnings $bsc_flags -c -o $out -bs-syntax-only -bs-binary-ast -impl $in
   description = [34mBuilding[39m [2m${out}[22m
@@ -33,6 +33,14 @@ build src/hooks/useHover.mlast : build_ast_and_module_sets_from_re $src_root_dir
 build src/hooks/useHover.d : build_deps src/hooks/useHover.mlast
 build src/hooks/useHover-ReasonReactHooks.cmj |  $src_root_dir/lib/js/src/hooks/useHover.js src/hooks/useHover-ReasonReactHooks.cmi : re_cmj_cmi src/hooks/useHover.mlast ||  src/hooks/useHover.d
   g_pkg_flg = $g_pkg_flg  -bs-package-output commonjs:lib/js/src/hooks
+build src/utils/Utils.mlast : build_ast_and_module_sets_from_re $src_root_dir/src/utils/Utils.re
+build src/utils/Utils.d : build_deps src/utils/Utils.mlast
+build src/utils/Utils-ReasonReactHooks.cmj |  $src_root_dir/lib/js/src/utils/Utils.js src/utils/Utils-ReasonReactHooks.cmi : re_cmj_cmi src/utils/Utils.mlast ||  src/utils/Utils.d
+  g_pkg_flg = $g_pkg_flg  -bs-package-output commonjs:lib/js/src/utils
+build src/utils/UtilsDom.mlast : build_ast_and_module_sets_from_re $src_root_dir/src/utils/UtilsDom.re
+build src/utils/UtilsDom.d : build_deps src/utils/UtilsDom.mlast
+build src/utils/UtilsDom-ReasonReactHooks.cmj |  $src_root_dir/lib/js/src/utils/UtilsDom.js src/utils/UtilsDom-ReasonReactHooks.cmi : re_cmj_cmi src/utils/UtilsDom.mlast ||  src/utils/UtilsDom.d
+  g_pkg_flg = $g_pkg_flg  -bs-package-output commonjs:lib/js/src/utils
 rule build_package
   command = $bsc -w -49 -no-alias-deps -bs-cmi-only -c $in
   restat = 1
