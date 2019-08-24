@@ -1,0 +1,24 @@
+{
+    "name": "@julesgu/reason-react-hooks",
+    "version": "0.1.0",
+    "main": "lib/js/src/Hooks.js",
+    "scripts": {
+        "build": "bsb -make-world",
+        "start": "bsb -make-world -w",
+        "clean": "bsb -clean-world",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "BuckleScript"
+    ],
+    "author": "Jules Guesnon <hello@julesguesnon.com>",
+    "license": "MIT",
+    "dependencies": {
+        "react": "^16.8.1",
+        "react-dom": "^16.8.1",
+        "reason-react": ">=0.7.0"
+    },
+    "devDependencies": {
+        "bs-platform": "^5.0.6"
+    }
+}
