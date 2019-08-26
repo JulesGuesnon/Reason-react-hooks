@@ -1,6 +1,6 @@
 {
     "name": "reason-react-hooks",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "main": "lib/js/src/Hooks.js",
     "description": "Some hooks in ReasonML for reason-react that can be useful.",
     "repository": {
