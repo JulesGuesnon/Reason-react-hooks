@@ -1,4 +1,8 @@
 Hooks
 UseHover
+UseVisible
+UseDebounce
+UseDidMount
+UseWindowSize
 Utils
 UtilsDom

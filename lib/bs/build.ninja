@@ -5,7 +5,7 @@ bsdep = /Users/julesguesnon/Dev/open/reason-react-hooks/node_modules/bs-platform
 warnings = -w -30-40+6+7+27+32..39+44+45+101
 bsc_flags = -nostdlib -I '/Users/julesguesnon/Dev/open/reason-react-hooks/node_modules/bs-platform/lib/ocaml' -color always
 ppx_flags = 
-g_pkg_incls = -I /Users/julesguesnon/Dev/open/reason-react-hooks/node_modules/reason-react/lib/ocaml
+g_pkg_incls = -I /Users/julesguesnon/Dev/open/reason-react-hooks/node_modules/reason-react/lib/ocaml -I /Users/julesguesnon/Dev/open/reason-react-hooks/node_modules/bs-intersection-observer/lib/ocaml
 bs_package_dev_includes = 
 g_ns = -bs-ns ReasonReactHooks
 bsb_dir_group = 0
@@ -32,6 +32,22 @@ build src/Hooks-ReasonReactHooks.cmj |  $src_root_dir/lib/js/src/Hooks.js src/Ho
 build src/hooks/useHover.mlast : build_ast_and_module_sets_from_re $src_root_dir/src/hooks/useHover.re
 build src/hooks/useHover.d : build_deps src/hooks/useHover.mlast
 build src/hooks/useHover-ReasonReactHooks.cmj |  $src_root_dir/lib/js/src/hooks/useHover.js src/hooks/useHover-ReasonReactHooks.cmi : re_cmj_cmi src/hooks/useHover.mlast ||  src/hooks/useHover.d
+  g_pkg_flg = $g_pkg_flg  -bs-package-output commonjs:lib/js/src/hooks
+build src/hooks/UseVisible.mlast : build_ast_and_module_sets_from_re $src_root_dir/src/hooks/UseVisible.re
+build src/hooks/UseVisible.d : build_deps src/hooks/UseVisible.mlast
+build src/hooks/UseVisible-ReasonReactHooks.cmj |  $src_root_dir/lib/js/src/hooks/UseVisible.js src/hooks/UseVisible-ReasonReactHooks.cmi : re_cmj_cmi src/hooks/UseVisible.mlast ||  src/hooks/UseVisible.d
+  g_pkg_flg = $g_pkg_flg  -bs-package-output commonjs:lib/js/src/hooks
+build src/hooks/UseDebounce.mlast : build_ast_and_module_sets_from_re $src_root_dir/src/hooks/UseDebounce.re
+build src/hooks/UseDebounce.d : build_deps src/hooks/UseDebounce.mlast
+build src/hooks/UseDebounce-ReasonReactHooks.cmj |  $src_root_dir/lib/js/src/hooks/UseDebounce.js src/hooks/UseDebounce-ReasonReactHooks.cmi : re_cmj_cmi src/hooks/UseDebounce.mlast ||  src/hooks/UseDebounce.d
+  g_pkg_flg = $g_pkg_flg  -bs-package-output commonjs:lib/js/src/hooks
+build src/hooks/UseDidMount.mlast : build_ast_and_module_sets_from_re $src_root_dir/src/hooks/UseDidMount.re
+build src/hooks/UseDidMount.d : build_deps src/hooks/UseDidMount.mlast
+build src/hooks/UseDidMount-ReasonReactHooks.cmj |  $src_root_dir/lib/js/src/hooks/UseDidMount.js src/hooks/UseDidMount-ReasonReactHooks.cmi : re_cmj_cmi src/hooks/UseDidMount.mlast ||  src/hooks/UseDidMount.d
+  g_pkg_flg = $g_pkg_flg  -bs-package-output commonjs:lib/js/src/hooks
+build src/hooks/UseWindowSize.mlast : build_ast_and_module_sets_from_re $src_root_dir/src/hooks/UseWindowSize.re
+build src/hooks/UseWindowSize.d : build_deps src/hooks/UseWindowSize.mlast
+build src/hooks/UseWindowSize-ReasonReactHooks.cmj |  $src_root_dir/lib/js/src/hooks/UseWindowSize.js src/hooks/UseWindowSize-ReasonReactHooks.cmi : re_cmj_cmi src/hooks/UseWindowSize.mlast ||  src/hooks/UseWindowSize.d
   g_pkg_flg = $g_pkg_flg  -bs-package-output commonjs:lib/js/src/hooks
 build src/utils/Utils.mlast : build_ast_and_module_sets_from_re $src_root_dir/src/utils/Utils.re
 build src/utils/Utils.d : build_deps src/utils/Utils.mlast
