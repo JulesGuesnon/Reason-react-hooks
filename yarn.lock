@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+bs-intersection-observer@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/bs-intersection-observer/-/bs-intersection-observer-0.1.2.tgz#1e2eef58c16f3c65dedd5973142eb3f61d2fc129"
+  integrity sha512-Ni30XY9Agly91ZohLDs0Y5I/M17orGUusOEUiEtGnDj623l3g2HmWxSSJ22mVPZAmtTWIzEUkPrw49RVZd7MZg==
+
 bs-platform@^5.0.6:
   version "5.0.6"
   resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-5.0.6.tgz#88c13041fb020479800de3d82c680bf971091425"
