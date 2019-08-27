@@ -1,15 +1,4 @@
-[@bs.module "react-dom"]
-external findDOMNode: 'a => Dom.element = "findDOMNode";
-
-[@bs.send]
-external addEventListener: (Dom.element, string, unit => unit) => unit =
-  "addEventListener";
-
-[@bs.send]
-external removeEventListener: (Dom.element, string, unit => unit) => unit =
-  "removeEventListener";
-
-let optionFromRef = ref => ref->React.Ref.current->Js.Nullable.toOption;
+open Utils.Dom;
 
 let useHover = () => {
   let (isHovered, setIsHovered) = React.useState(() => false);
@@ -21,7 +10,7 @@ let useHover = () => {
   React.useEffect1(
     () => {
       ref
-      ->optionFromRef
+      ->Utils.optionFromRef
       ->Belt.Option.map(ref => {
           let node = ref->findDOMNode;
           node->addEventListener("mouseenter", onMouseOver);
@@ -31,7 +20,7 @@ let useHover = () => {
       Some(
         () =>
           ref
-          ->optionFromRef
+          ->Utils.optionFromRef
           ->Belt.Option.map(ref => {
               let node = ref->findDOMNode;
               node->removeEventListener("mouseenter", onMouseOver);

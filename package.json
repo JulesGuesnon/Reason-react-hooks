@@ -1,8 +1,11 @@
 {
     "name": "reason-react-hooks",
-    "version": "0.1.1",
+    "version": "0.2.1",
     "main": "lib/js/src/Hooks.js",
-    "description": "This package contains different kind of hooks that you might need",
+    "description": "Some hooks in ReasonML for reason-react that can be useful.",
+    "repository": {
+        "url": "https://github.com/JulesGuesnon/reason-react-hooks"
+    },
     "scripts": {
         "prepublish": "bsb -make-world",
         "build": "bsb -make-world",
@@ -14,12 +17,14 @@
         "BuckleScript",
         "ReasonReact",
         "ReasonML",
+        "Reason",
         "Hooks",
         "React"
     ],
     "author": "Jules Guesnon <hello@julesguesnon.com>",
     "license": "MIT",
     "dependencies": {
+        "bs-intersection-observer": "^0.1.2",
         "react": "^16.8.1",
         "react-dom": "^16.8.1",
         "reason-react": ">=0.7.0"

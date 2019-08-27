@@ -5,6 +5,6 @@
         "subdirs": true
     },
     "namespace": true,
-    "bs-dependencies": ["reason-react"],
+    "bs-dependencies": ["reason-react", "bs-intersection-observer"],
     "refmt": 3
 }
