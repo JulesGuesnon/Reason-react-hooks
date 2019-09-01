@@ -30,7 +30,7 @@ All the hooks are located under `ReasonReactHooks.Hooks`
 
 ## Examples
 
-### useVisible :eyes:
+### useVisible
 
 This hook allow you to detect when an element appear on the screen.
 **It will trigger every time the element enter the window**, which mean if the element is visible, then not, and visible again, the callback will trigger **2 times**.
