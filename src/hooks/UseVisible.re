@@ -3,15 +3,18 @@ type t;
 
 [@bs.new] external intersectionObserver: unit => t = "IntersectionObserver";
 
-let useVisible = (~cb) => {
+let useVisible = () => {
   let ref = React.useRef(Js.Nullable.null);
+  let (isVisible, setIsVisible) = React.useState(_ => false);
   let observer =
     Create.intersectionObserver(
       ~cb=
         (entries, _) =>
           Belt.Array.map(entries, entry =>
             if (entry.intersectionRatio > 0.) {
-              cb();
+              setIsVisible(_ => true);
+            } else {
+              setIsVisible(_ => false);
             }
           )
           ->ignore,
@@ -22,21 +25,7 @@ let useVisible = (~cb) => {
     () => {
       ref
       ->Utils.optionFromRef
-      ->Belt.Option.map(ref => {
-          let observer =
-            Create.intersectionObserver(
-              ~cb=
-                (entries, _) =>
-                  Belt.Array.map(entries, entry =>
-                    if (entry.intersectionRatio > 0.) {
-                      cb();
-                    }
-                  )
-                  ->ignore,
-              ~options=None,
-            );
-          observer.observe(ref);
-        })
+      ->Belt.Option.map(ref => observer.observe(ref))
       ->ignore;
       Some(
         () =>
@@ -52,5 +41,5 @@ let useVisible = (~cb) => {
     [|ref->React.Ref.current|],
   );
 
-  ReactDOMRe.Ref.domRef(ref);
+  (ReactDOMRe.Ref.domRef(ref), isVisible);
 };
