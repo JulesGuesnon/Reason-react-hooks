@@ -1,10 +1,12 @@
 {
     "name": "reason-react-hooks",
-    "sources": {
-        "dir": "src",
-        "subdirs": true,
-        "public": ["Hooks"]
-    },
+    "sources": [
+        {
+            "dir": "src",
+            "public": ["Hooks"],
+            "subdirs": true
+        }
+    ],
     "namespace": true,
     "bs-dependencies": ["reason-react", "bs-intersection-observer"],
     "refmt": 3
