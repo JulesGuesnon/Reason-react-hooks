@@ -30,7 +30,7 @@ All the hooks are located under `ReasonReactHooks.Hooks`
 
 ## Examples
 
-### useVisible :eyes:
+### useVisible
 
 This hook allow you to detect when an element appear on the screen.
 **It will trigger every time the element enter the window**, which mean if the element is visible, then not, and visible again, the callback will trigger **2 times**.
@@ -124,6 +124,23 @@ let make = () => {
   let width = windowSize.width;
   <div>
     {j| The window is currently $width x $height|j}->ReasonReact.string
+  </div>;
+};
+```
+
+### useMousePosition
+
+This hook allow you to get the x and y of the mouse.
+**It handle the window resize**
+
+```reason
+[@react.component]
+let make = () => {
+  let mousePosition = ReasonReactHooks.Hooks.useMousePosition();
+  let y = mousePosition.y;
+  let x = mousePosition.x;
+  <div>
+    {j| The window is currently $x x $y|j}->ReasonReact.string
   </div>;
 };
 ```
