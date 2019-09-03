@@ -131,7 +131,6 @@ let make = () => {
 ### useMousePosition
 
 This hook allow you to get the x and y of the mouse.
-**It handle the window resize**
 
 ```reason
 [@react.component]
