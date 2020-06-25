@@ -4,8 +4,8 @@ let useHover = () => {
   let (isHovered, setIsHovered) = React.useState(() => false);
   let ref = React.useRef(Js.Nullable.null);
 
-  let onMouseOver = () => setIsHovered(_ => true);
-  let onMouseOut = () => setIsHovered(_ => false);
+  let onMouseOver = _ => setIsHovered(_ => true);
+  let onMouseOut = _ => setIsHovered(_ => false);
 
   React.useEffect1(
     () => {
