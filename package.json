@@ -29,7 +29,10 @@
         "react-dom": "^16.8.1",
         "reason-react": ">=0.7.0"
     },
+    "peerDependencies": {
+      "bs-platform": "^5 || ^7"
+    },
     "devDependencies": {
-        "bs-platform": "^5.0.6"
+        "bs-platform": "^7"
     }
 }

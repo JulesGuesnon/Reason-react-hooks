@@ -7,10 +7,10 @@ bs-intersection-observer@^0.1.2:
   resolved "https://registry.yarnpkg.com/bs-intersection-observer/-/bs-intersection-observer-0.1.2.tgz#1e2eef58c16f3c65dedd5973142eb3f61d2fc129"
   integrity sha512-Ni30XY9Agly91ZohLDs0Y5I/M17orGUusOEUiEtGnDj623l3g2HmWxSSJ22mVPZAmtTWIzEUkPrw49RVZd7MZg==
 
-bs-platform@^5.0.6:
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-5.0.6.tgz#88c13041fb020479800de3d82c680bf971091425"
-  integrity sha512-6Boa2VEcWJp2WJr38L7bp3J929nYha7gDarjxb070jWzgfPJ/WbzjipmSfnu2eqqk1MfjEIpBipbPz6n1NISwA==
+bs-platform@^7:
+  version "7.3.2"
+  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-7.3.2.tgz#301f5c9b4e8cf5713cb60ca22e145e56e793affe"
+  integrity sha512-seJL5g4anK9la4erv+B2o2sMHQCxDF6OCRl9en3hbaUos/S3JsusQ0sPp4ORsbx5eXfHLYBwPljwKXlgpXtsgQ==
 
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
