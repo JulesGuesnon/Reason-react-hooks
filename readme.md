@@ -26,8 +26,6 @@ Then add the dependency to you `bsconfig.json`
 
 All the hooks are located under `ReasonReactHooks.Hooks`
 
-:rotating_light: **Don't use any other module,** for now bucklescript private module system isn't working but when it will, only `ReasonReactHooks.Hooks` will be expose.
-
 ## Examples
 
 ### useVisible
