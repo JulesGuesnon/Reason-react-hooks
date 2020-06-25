@@ -27,10 +27,10 @@
         "bs-intersection-observer": "^0.1.2",
         "react": "^16.8.1",
         "react-dom": "^16.8.1",
-        "reason-react": ">=0.7.0"
+        "reason-react": ">=0.7.1"
     },
     "peerDependencies": {
-      "bs-platform": "^5 || ^7"
+      "bs-platform": "^5 || ^7 || ^8"
     },
     "devDependencies": {
         "bs-platform": "^7"
